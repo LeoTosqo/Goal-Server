@@ -29,7 +29,6 @@ const getOngoingGoals = async (req, res) => {
 };
 
 const getCompletedGoals = async (req, res) => {
-  res.send("get completed goal");
   const goals = await GOAL.find({ progress: { $eq: 100 } }).sort("-createdAt");
   res.status(200).json({ success: true, num: goals.length, goals });
 };
