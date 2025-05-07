@@ -6,7 +6,7 @@ const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 const goalRouter = require("./routes/goalRouter");
 
-//middleware, are fuction that on the server within req and res
+//middleware, are fuction that on the server within req and resnhr
 app.use(express.json()); //parse json data
 app.use(cors());
 
