@@ -3,12 +3,12 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
-const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 const goalRouter = require("./routes/goalRouter");
 
 //middleware, are fuction that on the server within req and res
 app.use(express.json()); //parse json data
-app.use(cors()); 
+app.use(cors());
 
 //home route
 app.get("/", (req, res) => {
